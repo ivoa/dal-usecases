@@ -30,51 +30,50 @@ Execution Reports
  <RESOURCE type="meta" utype="adhoc:service" name="Mean radial velocities on absolute scale">
     <DESCRIPTION> This service allows to retrieve the same record ( mean radial velocities on absolute scale) in another format. An input parameter without name allows to choose the response format</DESCRIPTION>
    <PARAM name="accessURL" datatype="char" arraysize="*"
-         value="http://vizier.u-strasbg.fr/viz-bin/VizieR-5?-info=XML&amp;-out.add=.&amp;-source=I/345/rvstdcat&amp;recno={Fields:recno}&amp;{mime}"/>
+         value="http://vizier.u-strasbg.fr/viz-bin/{mime}?-info=XML&amp;-out.add=.&amp;-source=I/345/rvstdcat&amp;recno={Fields.recno}"/>
    <PARAM name="contentType" datatype="char" arraysize="*" value="text/html"/>
           <GROUP name="inputParams">
-       <PARAM name="mime" datatype="char"  value="">
+         <PARAM name="mime" datatype="char"  value="">
          <VALUES>
-           <OPTION value="text/plain" />
-           <OPTION value="csv" />
-           <OPTION value="VOTable" />
-           <OPTION value="VOTable-bin" />
-           <OPTION value="HTML" />
+           <OPTION value="VizieR" />
+           <OPTION value="asu-tsv" />
+           <OPTION value="votable" />
+           <OPTION value="asu-fits" />
          </VALUES>
      </PARAM>    
+
      </GROUP> 
 </RESOURCE>
 <RESOURCE type="meta" utype="adhoc:service" name="Original ground-based radial velocity measurements ">
     <DESCRIPTION> This service allows to retrieve the the original ground based radial velocities  for  means below. An input parameter without name allows to choose the response format</DESCRIPTION>
    <PARAM name="accessURL" datatype="char" arraysize="*"
-         value="http://vizier.u-strasbg.fr/viz-bin/VizieR-4?-info=XML&amp;-out.add=.&amp;-source=I/345/rvstdmes&amp;ID={Fields:ID}&amp;{mime}"/>
+         value="http://vizier.u-strasbg.fr/viz-bin/{mime}?-info=XML&amp;-out.add=.&amp;-source=I/345/rvstdmes&amp;ID={Fields.ID}"/>
    <PARAM name="contentType" datatype="char" arraysize="*" value="text/html"/>
       <GROUP name="inputParams">
-       <PARAM name="mime" datatype="char"  value="">
+               <PARAM name="mime" datatype="char"  value="">
          <VALUES>
-           <OPTION value="text/plain" />
-           <OPTION value="csv" />
-           <OPTION value="VOTable" />
-           <OPTION value="VOTable-bin" />
-           <OPTION value="HTML" />
+           <OPTION value="VizieR" />
+           <OPTION value="asu-tsv" />
+           <OPTION value="votable" />
+           <OPTION value="asu-fits" />
          </VALUES>
      </PARAM>    
+
      </GROUP> 
 </RESOURCE>
 <RESOURCE type="meta" utype="adhoc:service" name="Gaia data release 2 (Gaia DR2).">
    <DESCRIPTION> This service allows to retrieve the GAIA DR2 record for each source below. An input parameter without name allows to choose the response format</DESCRIPTION>
    <PARAM name="accessURL" datatype="char" arraysize="*"
-         value="http://vizier.u-strasbg.fr/viz-bin/VizieR-4?-info=XML&amp;-out.add=.&amp;-source=I/345/gaia2*&amp;Source={Fields:Source}&amp;{mime}"/>
+         value="http://vizier.u-strasbg.fr/viz-bin/{mime}?-info=XML&amp;-out.add=.&amp;-source=I/345/gaia2*&amp;Source={Fields.Source}&amp;{mime}"/>
    <PARAM name="contentType" datatype="char" arraysize="*" value="text/html"/>
      <PARAM name="contentType" datatype="char" arraysize="*" value="text/html"/>
         <GROUP name="inputParams">
        <PARAM name="mime" datatype="char"  value="">
          <VALUES>
-           <OPTION value="text/plain" />
-           <OPTION value="csv" />
-           <OPTION value="VOTable" />
-           <OPTION value="VOTable-bin" />
-           <OPTION value="HTML" />
+           <OPTION value="VizieR" />
+           <OPTION value="asu-tsv" />
+           <OPTION value="votable" />
+           <OPTION value="asu-fits" />
          </VALUES>
      </PARAM>    
      </GROUP>
@@ -83,7 +82,7 @@ Execution Reports
  <RESOURCE type="meta" utype="adhoc:service" name="Flag">
  <DESCRIPTION>this service allows to retrieve definition of the flag below</DESCRIPTION>
    <PARAM name="accessURL" datatype="char" arraysize="*"
-         value="http://vizier.u-strasbg.fr/viz-bin/VizieR?-6N&amp;-info=XML&amp;-out.add=.&amp;&amp;lt;&quot;Note&quot;&amp;catid=1345&amp;catid=41&amp;-out.emph={Fields:Flag}"/>
+         value="http://vizier.u-strasbg.fr/viz-bin/VizieR?-6N&amp;-out.form=H0&//*&%3C%22Note%22&catid%3D1345&notid%3D41&-out.emph={Fields.Flag}"/>
    <PARAM name="contentType" datatype="char" arraysize="*" value="text/html"/>
 
 </RESOURCE>
