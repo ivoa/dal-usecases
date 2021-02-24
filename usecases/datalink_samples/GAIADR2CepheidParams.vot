@@ -30,16 +30,15 @@ Execution Reports
  <RESOURCE type="meta" utype="adhoc:service" name="Gaia data release 2 (Gaia DR2).">
    <DESCRIPTION> This service allows to retrieve the GAIA DR2 record for each cepheid with variability parameters below. An input parameter without name allows to choose the response format</DESCRIPTION>
    <PARAM name="accessURL" datatype="char" arraysize="*"
-         value="http://vizier.u-strasbg.fr/viz-bin/VizieR-4?-info=XML&amp;-out.add=.&amp;-source=I/345/gaia2*&amp;Source={Fields.Source}&amp;{mime}"/>
+         value="http://vizier.u-strasbg.fr/viz-bin/{mime}?-info=XML&amp;-out.add=.&amp;-source=I/345/gaia2*&amp;Source={Fields.Source}"/>
    <PARAM name="contentType" datatype="char" arraysize="*" value="text/html"/>
       <GROUP name="inputParams">
        <PARAM name="mime" datatype="char"  value="">
          <VALUES>
-           <OPTION value="text/plain" />
-           <OPTION value="csv" />
-           <OPTION value="VOTable" />
-           <OPTION value="VOTable-bin" />
-           <OPTION value="HTML" />
+           <OPTION value="VizieR" />
+           <OPTION value="asu-tsv" />
+           <OPTION value="votable" />
+           <OPTION value="asu-fits" />
          </VALUES>
      </PARAM> 
     </GROUP>    
